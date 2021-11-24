@@ -1,0 +1,113 @@
+div#background{
+    background:#f2f2f2;
+}
+div#masalah ul#list{
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 1.9rem;
+line-height: 35px;
+}
+div#masalah h1{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 40px;
+    color: #000000;
+}
+div#masalah ul li{
+    list-style-image: url(img/assets/icon_problem.png);
+}
+div h1#mengapa{
+    font-family: Rosarivo;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 40px;
+
+    color: #000000;
+}
+a#tombolpesan{
+    background: #4343FC;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+div#kartuproduk{
+    background:#8383ff;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+border-radius: 20px;
+box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+}
+div#kartupelayanan{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 16px;
+
+    color: #000000;
+
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+div#kartupelayanan ul li {
+ list-style-image: url('img/assets/icon_kelebihan.png');
+}
+
+div#kartuproduk ul li {
+    list-style-image: url('img/assets/icon_product.png')
+}
+div#kotakpelayanan {
+    background:#dee9ff;
+}
+
+div.card-body#testi{
+    background:#f2f2f2;
+    border: none !important;
+}
+div#carousel_testi{
+    background: #c4c4c4;
+    padding: 15px;
+}
+
+a#tombol_wa{
+    border-radius: 25px;
+}
+
+div#demo{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2rem;
+}
+
+div.container{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+div#kartupelayanan img{
+    padding: 15px;
+}
+
+div#kartuproduk ul{
+    margin: 20px;
+}
+
+div#kotaktombol{
+    bottom: 5px;
+    position: relative;
+}
