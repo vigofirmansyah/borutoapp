@@ -36,6 +36,7 @@ $routes->get('/', 'Konten::index');
 $routes->get('/konten', 'Konten::index');
 $routes->get('instagram', 'Instagram::index');
 $routes->get('landing' ,'Landing::index');
+$routes->get('api', 'Instagram::api');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
