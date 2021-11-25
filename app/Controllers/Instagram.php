@@ -11,7 +11,7 @@ class Instagram extends BaseController
     public function index()
     {
         $response = $this->client->request(
-            'POST', 'https://graph.instagram.com/17841445490064128', 
+            'GET', 'https://graph.instagram.com/17841445490064128', 
             [
     'auth' => ['access_token', 'IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB'],
     ['fields', 'username, id']
