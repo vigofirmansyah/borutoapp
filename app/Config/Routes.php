@@ -32,8 +32,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
-$routes->get('/', 'Konten::index');
-$routes->get('/konten', 'Konten::index');
+$routes->get('/', 'Home::index');
+$routes->get('/konten', 'Home::index');
 $routes->get('instagram', 'Instagram::index');
 $routes->get('landing' ,'Landing::index');
 $routes->get('api', 'Instagram::api');
