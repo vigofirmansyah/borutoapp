@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 // $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::index');
 $routes->get('/konten', 'Home::index');
-$routes->get('instagram', 'Instagram::index');
+$routes->get('instagram', 'Home::index');
 $routes->get('landing' ,'Landing::index');
 $routes->get('api', 'Instagram::api');
 /*
