@@ -4,20 +4,21 @@ namespace App\Controllers;
 
 class Instagram extends BaseController
 {
-    public function index()
+    public function __construct()
     {
-        return view('konten/instagram.php');
-    }
-    public function getData(){
-                $client = \Config\Services::curlrequest();
-        $response = $client->request('GET', 'https://api.instagram.com/oauth/authorize', [
-    'client_id' => ['1548824348807300'],
-    'redirect_uri' => ['https://borutoaja.com/api'],
-    'response_type' => ['code'],
-    'scope' => ['user_profile', 'user_media']
+        $this->client = \Config\Services::curlrequest([
+    'baseURI' => 'https://graph.instagram.com/17841445490064128',
 ]);
     }
-    public function api(){
-        return view('konten/api.php');
+    public function index()
+    {
+        $response = $this->client->get('/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB');
+        $datainstagram = json_decode($response->getBody()->getContents(), true);
+$data = [
+    'title' => 'Instagram',
+    'datainstagram' => $datainstagram,
+];
+        return view('konten/instagram.php');
     }
+    
 }

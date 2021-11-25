@@ -1,4 +1,4 @@
 <div class="nav">
-    <a href="instagram/api">Instagram</a>
+    <a href="instagram">Instagram</a>
 </div>
 
