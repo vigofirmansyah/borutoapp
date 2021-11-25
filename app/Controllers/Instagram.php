@@ -6,19 +6,22 @@ class Instagram extends BaseController
 {
     public function __construct()
     {
-        $this->client = \Config\Services::curlrequest([
-    'baseURI' => 'https://graph.instagram.com/17841445490064128',
-]);
+        $this->client = \Config\Services::curlrequest();
     }
     public function index()
     {
-        $response = $this->client->get('/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB');
-
+        $response = $this->client->request(
+            'GET', 'https://graph.instagram.com/17841445490064128', 
+            [
+    'auth' => ['access_token', 'IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB'],
+    ['fields', 'username']
+]);
+        echo $response->getBody();
 $data = [
     'title' => 'Instagram',
     'datainstagram' => $response->getBody(),
 ];
-        return view('konten/instagram.php');
+        return view('konten/instagram.php', $data);
     }
     
 }
