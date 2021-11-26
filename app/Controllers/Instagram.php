@@ -22,7 +22,7 @@ class Instagram extends BaseController
             'GET', 'https://graph.instagram.com/17841445490064128',
             ['query' => ['access_token' => 'IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB'],
             ['fields'=> 'id,username']] ); 
-        $data = json_decode($response->getBody(), true);
+        $data = $this->response->getJSON();
         // return $data;
         dd($data);
     }
