@@ -15,12 +15,9 @@ class Instagram extends BaseController
         $this->user_id = '17841445490064128';
     }
     public function getUser()
-    {
-        $query =[
-            'query' => ['access_token' => 'IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB'],
-            ['fields'=> 'account_type,id,media_count,username']
-        ];
-         $response_user = $this->client->get($this->user_id, $query);
+    {     
+         $response_user = $this->client->get($this->user_id, ['query' => ['access_token' => 'IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB'],
+            ['fields'=> 'account_type,id,media_count,username']]);
         return $response_user->getBody();    
     }
 
