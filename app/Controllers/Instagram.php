@@ -18,7 +18,7 @@ class Instagram extends BaseController
     {
         $query =[
             'query' => ['access_token' => 'IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB'],
-            'fields'=> 'account_type,id,media_count,username'
+            ['fields'=> 'account_type,id,media_count,username']
         ];
          $response_user = $this->client->get($this->user_id, $query);
         return $response_user->getBody();    
