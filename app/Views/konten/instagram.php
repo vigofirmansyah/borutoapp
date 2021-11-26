@@ -1,7 +1,7 @@
 halaman instagram
 <?php 
-foreach ($datainstagram as $data) {
+// foreach ($datainstagram as $data) {
 
-    echo $data['username'];
-}
+//     echo $data['username'];
+// }
 ?>
