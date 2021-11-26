@@ -19,8 +19,7 @@ class Instagram extends BaseController
         $token = $this->access_token;
         //  $response_user = $this->client->get($this->user_id, ['query' => ['access_token' => $this->access_token],
         //     ['fields'=> 'account_type,id,media_count,username']]); 
-        $response = $this->client->get($userid, ['query' => ['access_token' => $token],
-            ['fields'=> 'account_type,id,media_count,username']]);
+        $response = $this->client->get($userid.'?access_token ='.$token.'&fields=account_type,id,media_count,username');
         return $response->getBody();   
         // $response = $this->client->request('GET', 'https://graph.instagram.com/17841445490064128', ['query' => ['access_token' => $this->access_token],
         //     ['fields'=> 'account_type,id,media_count,username']]); 
