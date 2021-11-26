@@ -32,7 +32,7 @@ $data = [
     'title' => 'Instagram',
     'datainstagram' => $this->getUser()
 ];
-        return view('konten/instagram.php');
+        return view('konten/instagram.php', $data);
     }
     
 }
