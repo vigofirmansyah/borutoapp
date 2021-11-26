@@ -15,15 +15,10 @@ class Instagram extends BaseController
         $this->user_id = '17841445490064128';
     }
     public function getUser()
-    {     $userid = $this->user_id; 
-        $token = $this->access_token;
-        //  $response_user = $this->client->get($this->user_id, ['query' => ['access_token' => $this->access_token],
-        //     ['fields'=> 'account_type,id,media_count,username']]); 
-        $response = $this->client->get('/'.$userid.'?access_token='.$token.'&fields=username');
-        return $response->getBody();   
-        // $response = $this->client->request('GET', 'https://graph.instagram.com/17841445490064128', ['query' => ['access_token' => $this->access_token],
-        //     ['fields'=> 'account_type,id,media_count,username']]); 
-        // return $response->getBody();
+    {     
+        $response = $this->client->request('GET', 'https://graph.instagram.com/17841445490064128', ['query' => ['access_token' => $this->access_token],
+            ['fields'=> 'account_type,id,media_count,username']]); 
+        return $response->getBody();
     }
 
 
