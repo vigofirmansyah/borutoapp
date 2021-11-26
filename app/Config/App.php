@@ -23,7 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'https://borutoaja.com/';
+    public $baseURL = 'https://localhost:8080';
 
     /**
      * --------------------------------------------------------------------------
