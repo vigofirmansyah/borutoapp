@@ -18,9 +18,9 @@ class Instagram extends BaseController
     {     
         $response = $this->client->request('GET', 'https://graph.instagram.com/17841445490064128', ['query' => ['access_token' => $this->access_token],
             ['fields'=> 'account_type,id,media_count,username']]); 
-        // $data = json_decode($response->getBody(), true);
-        // return $data;
-        dd($response);
+        $data = json_decode($response->getBody(), true);
+        return $data;
+        dd($data);
     }
 
 
