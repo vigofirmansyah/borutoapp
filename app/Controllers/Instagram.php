@@ -16,8 +16,12 @@ class Instagram extends BaseController
     }
     public function getUser()
     {     
-        $response = $this->client->request('GET', 'https://graph.instagram.com/17841445490064128', ['query' => ['access_token' => $this->access_token],
-            ['fields'=> 'account_type,id,media_count,username']]); 
+        // $response = $this->client->request('GET', 'https://graph.instagram.com/17841445490064128', ['query' => ['access_token' => $this->access_token],
+        //     ['fields'=> 'account_type,id,media_count,username']]);
+        $response = $this->client->request(
+            'GET', 'https://graph.instagram.com/17841445490064128',
+            ['query' => ['access_token' => 'IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB'],
+            ['fields'=> 'id,username']] ); 
         $data = json_decode($response->getBody(), true);
         // return $data;
         dd($data);
