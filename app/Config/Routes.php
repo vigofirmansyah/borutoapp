@@ -33,10 +33,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::index');
-$routes->get('/konten', 'Home::index');
-$routes->get('instagram', 'Home::index');
+$routes->get('/konten', 'Konten::index');
+$routes->get('instagram', 'Instagram::index');
 $routes->get('landing' ,'Landing::index');
-$routes->get('api', 'Instagram::api');
+// $routes->get('api', 'Instagram::api');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
