@@ -21,7 +21,7 @@ class Instagram extends BaseController
         // $response = $this->client->get($this->user_id, ['query' => ['access_token' => $this->access_token],
         //     ['fields'=> 'account_type,id,media_count,username']]);
         // return $response->getBody();   
-        $response = $this->client->request('GET', $this->user_id, ['query' => ['access_token' => $this->access_token],
+        $response = $this->client->request('GET', '17841445490064128', ['query' => ['access_token' => $this->access_token],
             ['fields'=> 'account_type,id,media_count,username']]); 
         return $response->getBody();
     }
