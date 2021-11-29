@@ -33,9 +33,12 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::index');
-$routes->get('/konten', 'Konten::index');
+// $routes->get('konten', 'Konten::index');
 $routes->get('instagram', 'Instagram::index');
 $routes->get('landing' ,'Landing::index');
+// $routes->add('showMedia/(:any)', 'Instagram::showMedia/$1/$2');
+$routes->add('/halaman/(:any)/(:any)', 'Instagram::halaman/$1/$2');
+$routes->add('/test/(:any)', 'Instagram::test/$1');
 // $routes->get('api', 'Instagram::api');
 /*
  * --------------------------------------------------------------------
