@@ -64,9 +64,9 @@
     </li>
 
        
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li> -->
     <li class="page-item">
       <a class="page-link" href="/halaman/after/<?= $media['paging']['cursors']['after']; ?>" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
@@ -74,7 +74,7 @@
     </li>
   </ul>
 </nav>
-<li> <a href="/test/1">teest</a></li>
+
         </div>
     </div>
 </div>
