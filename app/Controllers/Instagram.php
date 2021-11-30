@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Controllers;
-use CodeIgniter\I18n\Time;
+// use CodeIgniter\I18n\Time;
 class Instagram extends BaseController
 {
     public function __construct()
     {
-        $this->time = new Time('now');
+        // $this->time = new Time('now');
         $this->client = \Config\Services::curlrequest(
             [
                 'base_url' => 'https://graph.instagram.com',
