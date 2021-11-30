@@ -1,4 +1,5 @@
 <?php
+
 //php foreach loop
 // foreach ($profile as $key => $value) {
 //     echo $value . "<br>";
@@ -17,14 +18,14 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col">
             <table>
                 <tr>
-                    <td><?= $profile['username']; ?></td>
+                    <!-- <td><?= $profile['username']; ?></td>
                     <td><?= $profile['media_count'] ; ?></td>
-                    <td><?= $profile['account_type'] ; ?></td>
+                    <td><?= $profile['account_type'] ; ?></td> -->
                 </tr>
             </table>
         </div>
@@ -44,7 +45,8 @@
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">
-                                <?= $m['timestamp']; ?>
+                                <?php echo gmdate('Y-m-d H:i:s:e',strtotime($m['timestamp'])) ;?>
+                                <!-- <?= $m['timestamp']; ?> -->
                             </small>
                         </div>
                     </div>
