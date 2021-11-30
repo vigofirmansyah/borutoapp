@@ -58,7 +58,7 @@
             <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item">
-      <a class="page-link" href="/halaman/before/<?= $media['paging']['cursors']['after']; ?>" aria-label="Previous">
+      <a class="page-link" href="/halaman/before/<?= $media['paging']['cursors']['before']; ?>" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
