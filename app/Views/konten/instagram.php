@@ -45,7 +45,8 @@
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">
-                                <?php echo gmdate('Y-m-d H:i:s:e',strtotime($m['timestamp'])) ;?>
+                                <?php date_default_timezone_set('Asia/Bangkok');
+                                echo date('Y-m-d',strtotime($m['timestamp'])) ;?>
                                 <!-- <?= $m['timestamp']; ?> -->
                             </small>
                         </div>
