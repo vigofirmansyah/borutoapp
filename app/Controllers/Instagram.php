@@ -53,7 +53,7 @@ class Instagram extends BaseController
         return view('test', $data);
     }
     public function halaman($keterangan = null, $code = null){
-        $limit = 25;
+$limit = 25;
          $pagination = '&limit='.$limit;
         if($keterangan == 'before'){
             $pagination.='&before='.$code;
@@ -65,21 +65,30 @@ class Instagram extends BaseController
             $pagination = null;
         }
         $media = $this->showMedia($pagination);
-         $data = [
+        // dd($media);
+        if(empty($media['data'])){
+            return view('konten/halamaneror');
+        }
+        else{
+            $data = [
             'title' => 'Instagram',
             'profile' => $this->showProfile(),
             'media' => $media,
+            // 'limit' => $limit,
         ];
-
         return view('konten/instagram', $data);
+        }
+         
     }
     public function index()
 
     {
+        // $limit = 25;
         $data = [
             'title' => 'Instagram',
             'profile' => $this->showProfile(),
             'media' => $this->showMedia(),
+            // 'limit' => $limit
         ];
 
         return view('konten/instagram', $data);
