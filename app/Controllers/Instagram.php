@@ -53,7 +53,7 @@ class Instagram extends BaseController
         return view('test', $data);
     }
     public function halaman($keterangan = null, $code = null){
-$limit = 25;
+$limit = 24;
          $pagination = '&limit='.$limit;
         if($keterangan == 'before'){
             $pagination.='&before='.$code;
