@@ -66,10 +66,7 @@ $limit = 24;
         }
         $media = $this->showMedia($pagination);
         // dd($media);
-        if(empty($media['data'])){
-            return view('konten/halamaneror');
-        }
-        else{
+
             $data = [
             'title' => 'Instagram',
             'profile' => $this->showProfile(),
@@ -77,17 +74,18 @@ $limit = 24;
             // 'limit' => $limit,
         ];
         return view('konten/instagram', $data);
-        }
+
          
     }
     public function index()
 
     {
-        // $limit = 25;
+        $limit = 24;
+        $pagination = '&limit='.$limit;
         $data = [
             'title' => 'Instagram',
             'profile' => $this->showProfile(),
-            'media' => $this->showMedia(),
+            'media' => $this->showMedia($pagination),
             // 'limit' => $limit
         ];
 

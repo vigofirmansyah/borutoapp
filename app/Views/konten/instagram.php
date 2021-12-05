@@ -59,13 +59,13 @@
     <div class="row">
         <div class="col d-flex justify-content-center">
             <nav aria-label="Page navigation example">
-                <ul class="pagination" id="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="/halaman/before/<?= $media['paging']['cursors']['before']; ?>" aria-label="Previous">
+                <ul class="pagination" id="pagination"> 
+                    <li class="page-item <?= array_key_exists("previous",$media["paging"]) ? '': 'invisible'; ?>">
+                        <a class="page-link"  href="/halaman/before/<?= $media['paging']['cursors']['before']; ?>" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>    
-             
+
                     <li class="page-item">
                         <a class="page-link" href="/halaman/after/<?= $media['paging']['cursors']['after']; ?>" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
