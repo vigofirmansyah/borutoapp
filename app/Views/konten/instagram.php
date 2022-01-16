@@ -57,18 +57,18 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col d-flex justify-content-center">
+        <div class="col d-flex justify-content-center my-sm-3">
             <nav aria-label="Page navigation example">
-                <ul class="pagination" id="pagination"> 
-                    <li class="page-item <?= array_key_exists("previous",$media["paging"]) ? '': 'invisible'; ?>">
+                <ul class="pagination d-flex justify-content-around" id="pagination"> 
+                    <li class="page-item mx-sm-2 <?= array_key_exists("previous",$media["paging"]) ? '': 'invisible'; ?>">
                         <a class="page-link"  href="/halaman/before/<?= $media['paging']['cursors']['before']; ?>" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
+                            <span>Previous</span>
                         </a>
                     </li>    
 
-                    <li class="page-item">
+                    <li class="page-item mx-sm-2">
                         <a class="page-link" href="/halaman/after/<?= $media['paging']['cursors']['after']; ?>" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
+                            <span>Next</span>
                         </a>
                     </li>
                 </ul>

@@ -11,6 +11,10 @@
         </li> -->
         <li class="nav-item">
           <a class="nav-link" href="/instagram">Instagram</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/landing">To Buy</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#">Youtube</a>
