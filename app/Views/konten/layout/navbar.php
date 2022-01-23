@@ -35,13 +35,7 @@
           <a class="nav-link active" href="<?= base_url() ?>/instagram">Instagram</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url() ?>/landing">To Buy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Facebook</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="">Tiktok</a>
+          <a class="nav-link" href="<?= base_url() ?>/landing" target="_blank">To Buy</a>
         </li>
       </ul>
     </div>
