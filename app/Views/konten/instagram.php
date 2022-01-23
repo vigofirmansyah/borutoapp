@@ -61,7 +61,7 @@
                         </a>
                     </li>
 
-                    <li class="page-item mx-sm-2 bg-secondary">
+                    <li class="page-item mx-sm-2">
                         <a class="page-link" href="/halaman/after/<?= $media['paging']['cursors']['after']; ?>" aria-label="Next">
                             <span>Next</span>
                         </a>

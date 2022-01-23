@@ -32,17 +32,17 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav" id="navtop">
         <li class="nav-item">
-          <a class="nav-link active" href="instagram">Instagram</a>
+          <a class="nav-link active" href="<?= base_url() ?>/instagram">Instagram</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="landing">To Buy</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#facebook">Facebook</a>
+          <a class="nav-link" href="<?= base_url() ?>/landing">To Buy</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#tiktok">Tiktok</a>
-        </li> -->
+          <a class="nav-link" href="">Facebook</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Tiktok</a>
+        </li>
       </ul>
     </div>
   </div>

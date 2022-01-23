@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Controllers;
+
+use Config\View;
+
 // use CodeIgniter\I18n\Time;
 class Instagram extends BaseController
 {
@@ -41,47 +44,46 @@ class Instagram extends BaseController
     public function showMedia($pagination = null)
     {
         $media_fields = 'id,media_type,media_url,permalink,thumbnail_url,timestamp,username,caption';
-        $url = $this->user_id . '/media?fields=' . $media_fields .$pagination. '&access_token=' . $this->access_token;
+        $url = $this->user_id . '/media?fields=' . $media_fields . $pagination . '&access_token=' . $this->access_token;
         $media = $this->getApi($url);
         return $media;
     }
-    public function test($test = null){
+    public function test($test = null)
+    {
         $test2 = $test;
         $data = [
             'test' => $test2
         ];
         return view('test', $data);
     }
-    public function halaman($keterangan = null, $code = null){
-$limit = 24;
-         $pagination = '&limit='.$limit;
-        if($keterangan == 'before'){
-            $pagination.='&before='.$code;
-        }
-        elseif ($keterangan == 'after') {
-            $pagination.='&after='.$code;
-        }
-        else {
+    public function halaman($keterangan = null, $code = null)
+    {
+        $limit = 24;
+        $pagination = '&limit=' . $limit;
+        if ($keterangan == 'before') {
+            $pagination .= '&before=' . $code;
+        } elseif ($keterangan == 'after') {
+            $pagination .= '&after=' . $code;
+        } else {
             $pagination = null;
         }
         $media = $this->showMedia($pagination);
         // dd($media);
-
-            $data = [
+        // $data = null;
+        $data = [
             'title' => 'Instagram',
             'profile' => $this->showProfile(),
             'media' => $media,
             // 'limit' => $limit,
         ];
-        return view('konten/instagram', $data);
 
-         
+        return view('konten/instagram', $data);
     }
     public function index()
 
     {
         $limit = 24;
-        $pagination = '&limit='.$limit;
+        $pagination = '&limit=' . $limit;
         $data = [
             'title' => 'Instagram',
             'profile' => $this->showProfile(),
