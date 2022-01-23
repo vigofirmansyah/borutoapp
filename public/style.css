@@ -1,0 +1,49 @@
+.navbar-brand, .nav-item .nav-link {
+    color: #323254;
+}
+#navtop .nav-item .active{
+    background-color: #323254;
+    color: white;
+}
+.card{
+   transition: transform 2s, background-color 0.5s;
+}
+.pagination a{
+    color: #323254;
+    border: 1px solid #323254;
+}
+.pagination a:hover{
+    background-color: #323254;
+    color: white;
+}
+/* .card:hover{
+    transform: scale(1.1);
+    background-color: #323254;
+} */
+/* .nav-border{
+    border-bottom: 4px solid #323254;
+}
+.hover{
+    border-bottom:1px solid black;
+} */
+
+.nav-border{
+    width: 100%;
+    animation-name:example;
+    animation-duration:1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+@keyframes example {
+    0% {
+            width: 0;
+            height: 0;
+    }
+    100% {
+            width: 100%;
+            height: 4px;
+            background-color: #323254;
+    }
+}

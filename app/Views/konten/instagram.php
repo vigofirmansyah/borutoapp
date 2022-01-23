@@ -11,13 +11,8 @@
 ?>
 <?= $this->extend('konten/index'); ?>
 <?= $this->section('content'); ?>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h1><?= $title; ?></h1>
-        </div>
-    </div>
-</div>
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="col">
@@ -31,7 +26,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container">
     <div class="row row-cols-2 row-cols-sm-3 gy-5  gx-5">
         <?php foreach ($media['data'] as $m) : ?>
             <div class="col">
@@ -44,7 +39,7 @@
                         <a href="<?= $m['permalink']; ?>" target="_blank">Lihat lebih detail</a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">
+                        <small>
                             <?php date_default_timezone_set('Asia/Bangkok');
                             echo date('Y-m-d', strtotime($m['timestamp'])); ?>
                             <!-- <?= $m['timestamp']; ?> -->
@@ -59,14 +54,14 @@
     <div class="row">
         <div class="col d-flex justify-content-center my-sm-3">
             <nav aria-label="Page navigation example">
-                <ul class="pagination d-flex justify-content-around" id="pagination"> 
-                    <li class="page-item mx-sm-2 <?= array_key_exists("previous",$media["paging"]) ? '': 'invisible'; ?>">
-                        <a class="page-link"  href="/halaman/before/<?= $media['paging']['cursors']['before']; ?>" aria-label="Previous">
+                <ul class="pagination d-flex justify-content-around" id="pagination">
+                    <li class="page-item mx-sm-2 <?= array_key_exists("previous", $media["paging"]) ? '' : 'invisible'; ?>">
+                        <a class="page-link" href="/halaman/before/<?= $media['paging']['cursors']['before']; ?>" aria-label="Previous">
                             <span>Previous</span>
                         </a>
-                    </li>    
+                    </li>
 
-                    <li class="page-item mx-sm-2">
+                    <li class="page-item mx-sm-2 bg-secondary">
                         <a class="page-link" href="/halaman/after/<?= $media['paging']['cursors']['after']; ?>" aria-label="Next">
                             <span>Next</span>
                         </a>
