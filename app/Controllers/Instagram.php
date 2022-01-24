@@ -15,7 +15,7 @@ class Instagram extends BaseController
                 'base_url' => 'https://graph.instagram.com',
             ]
         );
-        $this->access_token = 'IGQVJXb09sWU9Demx6SVBHUVd1V2FpRGhaN3kxTEU3QlR5bHNWMDdqQWhRc3JvQ1V4YUo0Q1hWUVlMQWlhWml1bXRpUmlrUklVeUoxOFg2NmN1SjZAtVDFYakQ2MGhORFhCRGw1aGRB';
+        $this->access_token = 'IGQVJXNzZAQRWJuU213TFJvN1RxWnRjUUdrUW5vOUFiN29NUnd4R3k1MmNBWUNUZAWtmOEt2VlQ5YkxNY1JEVHhNb1ctOVFIQlhLTFAtMHhmdTVNN25NbkxSTVR1RkZAPbFZARcFFyUmF3';
         $this->user_id = '17841445490064128';
     }
     public function getApi($url = null)
@@ -90,7 +90,7 @@ class Instagram extends BaseController
             'media' => $this->showMedia($pagination),
             // 'limit' => $limit
         ];
-
+        // dd($data);
         return view('konten/instagram', $data);
     }
 }

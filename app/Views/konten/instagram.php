@@ -13,19 +13,7 @@
 <?= $this->section('content'); ?>
 
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <table>
-                <tr>
-                    <!-- <td><?= $profile['username']; ?></td>
-                    <td><?= $profile['media_count']; ?></td>
-                    <td><?= $profile['account_type']; ?></td> -->
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
+
 <div class="container">
     <div class="row row-cols-2 row-cols-sm-3 gy-5  gx-5">
         <?php foreach ($media['data'] as $m) : ?>
